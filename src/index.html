@@ -5,10 +5,77 @@
     <title>Caesar Cipher</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <div id="root">
-      <h1>Hola mundo!</h1>
-    </div>
+
+    <body>
+
+  <!-- Aquí se explica como funciona la web app-->  
+  
+  <h1>7-Secrets<h1>
+  
+  <h4><p> Seven Secrets permite que tú y tus BFF puedan tener conversaciones por mensaje, </p>
+   <p>en un código secreto, y que nadie más podrá descubrir!!! </p>
+  </h4>
+   
+  <div id="select_path">
+    <h4> Selecciona qué deseas hacer</h4>
+
+    <button id="select_encode_box" onclick="goToEncode()">Crear Mensaje Secreto</button>
+    <button id="select_decode_box" onclick="goToDecode()">Revelar Mensaje Secreto</button> 
+  
+  </div>
+  
+    <!-- Caja de texto para cifrar-->
+ 
+    <div id="encode_box" class="not_show">
+      <textarea id="textarea_enco" name="comments" rows="10" cols="40" placeholder="Escribe tu mensaje aquí"></textarea>
+      <br><br/>
+
+      <!-- Selección de offset para cifrado-->
+      Escribe un número del 1 al 100. Este número será la llave para que después descubran el mensaje secreto.
+      <br><br/> 
+      <input type ="text" id="selec_offset_enco" value="">
+      <br><br/>
+
+      <!--Botón de input de texto a cifrar-->
+      <input type ="button" onclick="getEncoText()" value="Crear Mensaje Secreto">
+
+      <p id="show_enco_msg"></p>
+
+      <br></br>
+      <input type= "button" id="btn_go_ini" value="Volver al Inicio">
+
+  
+    </div>  
+ 
+  
+    <!-- Caja de texto para descifrar, -->
+
+    <div id="decode_box" class="not_show">
+      <textarea id= "textarea_deco" name="comments" rows="10" cols="40" placeholder="Escribe tu mensaje aquí"></textarea>
+      <br><br/>
+
+      <!-- Selección de offset para cifrado-->
+      Escribe el número que te dieron de "llave" para revelar el mensaje secreto.
+      <br><br/> 
+      <input type ="text" id="selec_offset_deco" value="">
+      <br><br/>
+
+      <!--Botón de input de texto a cifrar y offset-->
+      <input type ="button" onclick="getDecoText()" value="Revelar Mensaje Secreto">
+      
+      <p id="show_deco_msg"></p>
+      
+      <br></br>
+      <input type= "button"  id="btn_go_ini" value="Volver al Inicio">
+
+    </div> 
+
+    <!-- botón para volver al inicio
+    <div id="goIniButton" class="not-show">
+    <br></br>
+    <button onclick="goIni()">Volver al Inicio</button> 
+    </div>-->
+
     <script src="cipher.js"></script>
     <script src="index.js"></script>
   </body>
