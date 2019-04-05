@@ -8,6 +8,8 @@
 
     <body>
 
+    
+
   <!-- Aquí se explica como funciona la web app-->  
   
   <h1>7-Secrets<h1>
@@ -39,15 +41,12 @@
       <!--Botón de input de texto a cifrar-->
       <input type ="button" onclick="getEncoText()" value="Crear Mensaje Secreto">
 
-      <p id="show_enco_msg"></p>
+      <p id="show_msg_enco"></p>
 
       <br></br>
-      <input type= "button" id="btn_go_ini" value="Volver al Inicio">
-
-  
+      
     </div>  
- 
-  
+   
     <!-- Caja de texto para descifrar, -->
 
     <div id="decode_box" class="not_show">
@@ -63,20 +62,21 @@
       <!--Botón de input de texto a cifrar y offset-->
       <input type ="button" onclick="getDecoText()" value="Revelar Mensaje Secreto">
       
-      <p id="show_deco_msg"></p>
+      <p id="show_msg_deco"></p>
       
       <br></br>
-      <input type= "button"  id="btn_go_ini" value="Volver al Inicio">
+      
 
     </div> 
 
-    <!-- botón para volver al inicio
-    <div id="goIniButton" class="not-show">
-    <br></br>
-    <button onclick="goIni()">Volver al Inicio</button> 
-    </div>-->
+    <div id="btn_ini" class="not_show">
+      <input type= "button"  id="btn_go_ini" value="Volver al Inicio">
+    </div>
 
     <script src="cipher.js"></script>
     <script src="index.js"></script>
+    
+    
+    
   </body>
 </html>

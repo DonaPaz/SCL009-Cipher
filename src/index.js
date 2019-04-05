@@ -1,53 +1,44 @@
 //window.onload = 
 
-//Al cargar, esconde los div designados como decodeBox, encodeBox
+//Al cargar, esconde los div designados: decodeBox, encodeBox y btn_ini
 
 function goToEncode(){
     document.getElementById("select_path").style.display="none";
     document.getElementById("encode_box").style.display="block";
+    document.getElementById("btn_ini").style.display="block";
    
 }
 
 function goToDecode(){
     document.getElementById("select_path").style.display="none";
     document.getElementById("decode_box").style.display="block";
+    document.getElementById("btn_ini").style.display="block";
     }
 
-// estas funciones obtienen el valor de las cajas de texto
-// por el momento está codificado para que muestre el mismo valor de la caja en un DIV
+
+// las siguientes funciones obtienen el valor de:
+// input textarea, offset y obtiene el resultado del cipher encode y decode
 
 function getEncoText(){
-    let encodeText = document.getElementById("textarea_enco").value.toUpperCase();
-    document.getElementById("show_enco_msg").innerHTML = encodeText;
-    
+    let userTextEncode = document.getElementById("textarea_enco").value.toUpperCase();
     let offsetEnco = parseInt(document.getElementById("selec_offset_enco").value);
-    console.log(offsetEnco);
-
+    encodeResult = cipher.encode(userTextEncode,offsetEnco);
+//    console.log(userTextEncode)
+//    console.log(offsetEnco);
   }
 
 function getDecoText(){
-    let decodeText = document.getElementById("textarea_deco").value.toUpperCase();
-    document.getElementById("show_deco_msg").innerHTML = decodeText;
+    let userTextDecode = document.getElementById("textarea_deco").value.toUpperCase();
+     let offsetDeco = parseInt(document.getElementById("selec_offset_deco").value);
+    decodeResult = cipher.decode(userTextDecode,offsetDeco);
+    
+    //console.log(offsetDeco);
+    //console.log(userTextDecode); 
+    }
 
-    let offsetDeco = parseInt(document.getElementById("selec_offset_deco").value);
-    console.log(offsetDeco);
-  }
-
-
-//Esta función permite regresar al inicio
-
-// //función ejemplo: btnShow.addEventListener('click', () => {
-// let userText = document.getElementById("user_text").value;
-// console.log(userText);
-
-//let btn_go_ini = document.getElementById("btn_go_ini");
+//botón para volver al inicio
 btn_go_ini.addEventListener('click', () => {
 location.reload(select_path);
     
-    //let userText = document.getElementById("user_text").value;
-   // alert("holo");
 })
 
-//function goIni() {
-//location.reload(select_path);
-//}
