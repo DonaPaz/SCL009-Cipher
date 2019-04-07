@@ -1,44 +1,51 @@
 //window.onload = 
-
 //Al cargar, esconde los div designados: decodeBox, encodeBox y btn_ini
+let select_path="";
 
-function goToEncode(){
+const btnEncode = document.getElementById("select_encode");
+
+btnEncode.addEventListener('click', () => {
     document.getElementById("select_path").style.display="none";
     document.getElementById("encode_box").style.display="block";
     document.getElementById("btn_ini").style.display="block";
    
-}
+})
 
-function goToDecode(){
+const btnDecode = document.getElementById("select_decode");
+
+btnDecode.addEventListener('click', () => {
     document.getElementById("select_path").style.display="none";
     document.getElementById("decode_box").style.display="block";
     document.getElementById("btn_ini").style.display="block";
-    }
+})
 
 
 // las siguientes funciones obtienen el valor de:
 // input textarea, offset y obtiene el resultado del cipher encode y decode
 
-function getEncoText(){
+let getEncoTex = document.getElementById("get_enco_text");
+getEncoTex.addEventListener('click', () => {
     let userTextEncode = document.getElementById("textarea_enco").value.toUpperCase();
     let offsetEnco = parseInt(document.getElementById("selec_offset_enco").value);
-    encodeResult = cipher.encode(userTextEncode,offsetEnco);
+    document.getElementById("show_msg_enco").innerHTML += cipher.encode(userTextEncode, offsetEnco);
+
 //    console.log(userTextEncode)
 //    console.log(offsetEnco);
-  }
+})
 
-function getDecoText(){
+let getDecoText = document.getElementById('get_deco_text')
+getDecoText.addEventListener('click', () => {
     let userTextDecode = document.getElementById("textarea_deco").value.toUpperCase();
-     let offsetDeco = parseInt(document.getElementById("selec_offset_deco").value);
-    decodeResult = cipher.decode(userTextDecode,offsetDeco);
+    let offsetDeco = parseInt(document.getElementById("selec_offset_deco").value);
+    document.getElementById("show_msg_deco").innerHTML += cipher.decode(userTextDecode, offsetDeco);
     
     //console.log(offsetDeco);
     //console.log(userTextDecode); 
-    }
+})
 
 //botón para volver al inicio
-btn_go_ini.addEventListener('click', () => {
+let btnGoIni = document.getElementById('btn_go_ini')
+btnGoIni.addEventListener('click', () => {
 location.reload(select_path);
     
 })
-

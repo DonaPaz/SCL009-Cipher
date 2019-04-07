@@ -11,19 +11,17 @@ window.cipher = {
       if(textToAscii>=65 && textToAscii<=90){
     
       let asciiResult = (textToAscii - 65 + offsetEnco)%26 + 65;
-      //console.log(asciiResult); //prueba resultado
+      //console.log(asciiResult);
       
       //codigo ascii a letra
       encodeResult += String.fromCharCode(asciiResult);
-
-    
-
-      }
-     
+      //console.log(encodeResult);
+      
+     }
     }
-    
-    document.getElementById("show_msg_enco").innerHTML = encodeResult;
-
+    return encodeResult;
+        
+    //  document.getElementById("show_msg_enco").innerHTML = encodeResult;
   },
  
   decode: (userTextDecode,offsetDeco) => {
@@ -44,11 +42,9 @@ window.cipher = {
         decodeResult += String.fromCharCode(asciiResult);
         //console.log(decodeResult);
       }
-
-     
     }
-    
-    document.getElementById("show_msg_deco").innerHTML = decodeResult;
+    return decodeResult;
+    //document.getElementById("show_msg_deco").innerHTML = decodeResult;
   },
 
 };
