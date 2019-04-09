@@ -1,4 +1,3 @@
-//window.onload = 
 //Al cargar, esconde los div designados: decodeBox, encodeBox y btn_ini
 let select_path="";
 
@@ -25,18 +24,18 @@ btnDecode.addEventListener('click', () => {
 
 let getEncoTex = document.getElementById("get_enco_text");
 getEncoTex.addEventListener('click', () => {
-    let userTextEncode = document.getElementById("textarea_enco").value.toUpperCase();
-    let offsetEnco = parseInt(document.getElementById("selec_offset_enco").value);
+    let userTextEncode = document.getElementById("textarea_enco").value.trim()
+    let offsetEnco = parseInt(document.getElementById("selec_offset_enco").value.trim());
     document.getElementById("show_msg_enco").innerHTML += cipher.encode(userTextEncode, offsetEnco);
 
-//    console.log(userTextEncode)
+  // console.log(userTextEncode)
 //    console.log(offsetEnco);
 })
 
 let getDecoText = document.getElementById('get_deco_text')
 getDecoText.addEventListener('click', () => {
-    let userTextDecode = document.getElementById("textarea_deco").value.toUpperCase();
-    let offsetDeco = parseInt(document.getElementById("selec_offset_deco").value);
+    let userTextDecode = document.getElementById("textarea_deco").value.trim()
+    let offsetDeco = parseInt(document.getElementById("selec_offset_deco").value.trim());
     document.getElementById("show_msg_deco").innerHTML += cipher.decode(userTextDecode, offsetDeco);
     
     //console.log(offsetDeco);
@@ -44,7 +43,7 @@ getDecoText.addEventListener('click', () => {
 })
 
 //botón para volver al inicio
-let btnGoIni = document.getElementById('btn_go_ini')
+let btnGoIni = document.getElementById('btn_go_ini');
 btnGoIni.addEventListener('click', () => {
 location.reload(select_path);
     

@@ -1,11 +1,48 @@
 body {
     text-align: center;
+    background-image: url(../img/heart.png)
 }
 
-p{
-    line-height: 80%
+h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 40px;
+    color: rgb(82, 4, 155);
+}
+
+h1 span{
+    font-size: 60px;
+    
+}
+
+h4, p {
+    line-height: 140%;
+    font-family: 'Nixie One', cursive;
 }
 
 .not_show {
     display: none;
 }
+
+textarea {
+    resize: none;
+    box-sizing: border-box;
+}
+
+.button {
+ /* border: 1px solid #333;*/
+  width: 20%;
+  border-radius: 5px;
+  background: pink;
+  cursor: pointer;
+  padding: 14px 20px;
+}
+
+.button:hover {
+    background: rgb(233, 78, 104);
+    color: white
+}
+
+img {
+    width: 7%;
+    height: 7%;
+    } 
