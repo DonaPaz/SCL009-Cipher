@@ -10,6 +10,7 @@
   <body>
 
 
+    <div class= "box">
     <!-- Aquí se explica como funciona la web app-->    
     <h1><img src="../img/diamont.png"><span>7</span>-Secrets</h1>
     <h4><p> Seven Secrets permite que tú y tus BFF puedan tener conversaciones por mensaje, <br>
@@ -21,7 +22,8 @@
 
       <button id="select_encode" class="button">Crear Mensaje Secreto</button>
       <button id="select_decode" class="button">Revelar Mensaje Secreto</button> 
-  
+      <br><br><br>
+
     </div>
   
     <!-- Caja de texto para cifrar-->
@@ -30,7 +32,7 @@
       <br> <br/>
 
       <!-- Selección de offset para cifrado-->
-      Escribe un número del 1 al 100. Este número será la llave para que después descubran el mensaje secreto.
+      Escribe un número del 1 al 10.<br> Este número será la llave para luego descubrir el mensaje secreto.
       <br> <br/> 
       <input type ="text" id="selec_offset_enco" min="1" max="200" value="">
       <br> <br/>
@@ -38,7 +40,7 @@
       <!--Botón de input de texto a cifrar-->
       <input type ="button" class="button" id="get_enco_text" value="Crear Mensaje Secreto">
 
-      <p id="show_msg_enco"></p>   
+      <p id="show_msg_enco" class="box_result"></p>   
     </div>  
    
     <!-- Caja de texto para descifrar, -->
@@ -54,16 +56,18 @@
       <!--Botón de input de texto a cifrar y offset-->
       <input type ="button" class="button" id="get_deco_text" value="Revelar Mensaje Secreto">
       
-      <p id="show_msg_deco"></p>   
+      <p id="show_msg_deco" class="box_result"></p>   
     </div> 
 
     <div id="btn_ini" class="not_show">
       <input type= "button"  class="button" id="btn_go_ini" value="Volver al Inicio">
+      <br><br><br>
     </div>
-
+  
     <script src="cipher.js"></script>
     <script src="index.js"></script>
     
+  </div>
   </body>
-  
+
 </html>
