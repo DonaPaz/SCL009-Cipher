@@ -26,6 +26,10 @@ describe('cipher', () => {
     
     });
 
+    it('debería retornar "3456" para "1234" con offset 2', () => {
+      assert.equal(cipher.encode('1234',2), '3456');
+    
+    });
 
   });
 
@@ -46,6 +50,11 @@ describe('cipher', () => {
 
     it('debería retornar "espacio en blanco" para "espacio en blanco" con offset 4', () => {
       assert.equal(cipher.decode(' ',4), ' ');
+    
+    });
+
+    it('debería retornar "1234" para "3456" con offset 2', () => {
+      assert.equal(cipher.decode('3456',2), '1234');
     
     });
 

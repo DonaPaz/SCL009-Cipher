@@ -1,73 +1,83 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ 
     <title>7Secrets</title>
+ 
     <link href="style.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Bad+Script|Comfortaa:300|Nixie+One|Pacifico" rel="stylesheet"> 
+  
   </head>
 
   <body>
 
 
-    <div class= "box">
-    <!-- Aquí se explica como funciona la web app-->    
-    <h1><img src="../img/diamont.png"><span>7</span>-Secrets</h1>
-    <h4><p> Seven Secrets permite que tú y tus BFF puedan tener conversaciones por mensaje, <br>
-    en un código secreto, y que nadie más podrá descubrir!!! </p>
-    </h4>
-   
-    <div id="select_path">
-      <h4> Selecciona qué deseas hacer</h4>
-
-      <button id="select_encode" class="button">Crear Mensaje Secreto</button>
-      <button id="select_decode" class="button">Revelar Mensaje Secreto</button> 
-      <br><br><br>
-
-    </div>
-  
-    <!-- Caja de texto para cifrar-->
-    <div id="encode_box" class="not_show">
-      <textarea id="textarea_enco" name="comments" rows="10" cols="40" placeholder="Escribe tu mensaje aquí"></textarea>
-      <br> <br/>
-
-      <!-- Selección de offset para cifrado-->
-      Escribe un número del 1 al 10.<br> Este número será la llave para luego descubrir el mensaje secreto.
-      <br> <br/> 
-      <input type ="text" id="selec_offset_enco" min="1" max="200" value="">
-      <br> <br/>
-
-      <!--Botón de input de texto a cifrar-->
-      <input type ="button" class="button" id="get_enco_text" value="Crear Mensaje Secreto">
-
-      <p id="show_msg_enco" class="box_result"></p>   
-    </div>  
-   
-    <!-- Caja de texto para descifrar, -->
-    <div id="decode_box" class="not_show">
-      <textarea id= "textarea_deco" name="comments" rows="10" cols="40" placeholder="Escribe tu mensaje aquí"></textarea>
-      <br><br/>
-
-      <!-- Selección de offset para cifrado-->
-      Escribe el número que te dieron de "llave" para revelar el mensaje secreto.
-      <br><br/> 
-      <input type ="text" id="selec_offset_deco" value="">
-      <br> <br/>
-      <!--Botón de input de texto a cifrar y offset-->
-      <input type ="button" class="button" id="get_deco_text" value="Revelar Mensaje Secreto">
+    <div class= "container">
+      <!-- Aquí se explica como funciona la web app-->    
       
-      <p id="show_msg_deco" class="box_result"></p>   
-    </div> 
-
-    <div id="btn_ini" class="not_show">
-      <input type= "button"  class="button" id="btn_go_ini" value="Volver al Inicio">
-      <br><br><br>
-    </div>
+      <header><h1><img src="../img/diamont.png" alt="Diamante"><span>7</span>-Secrets</h1></header>
+      <p> <strong> Secrets permite que tú y tus BFF puedan tener conversaciones por mensaje, <br>
+      en un código secreto, y que nadie más podrá descubrir!!! </strong></p>
   
-    <script src="cipher.js"></script>
-    <script src="index.js"></script>
+   
+      <section class="box1" id="select_path">
+        <h4> Selecciona qué deseas hacer</h4>
+
+        <button class="button" id="select_encode">Crear Mensaje Secreto</button>
+        <button class="button" id="select_decode">Revelar Mensaje Secreto</button> 
+  
+      </section>
+  
+      <!-- Caja de texto para cifrar-->
+      <div id="encode_box" class="not_show">
+        <textarea id="textarea_enco" name="comments" rows="10" cols="40" placeholder="Escribe tu mensaje aquí"></textarea>
+        <br>
+
+        <!-- Selección de offset para cifrado-->
+        Escribe un número del 1 al 10.<br> Este número será la llave para luego descubrir el mensaje secreto.
+        <br> <br/> 
+        <input type ="text" id="selec_offset_enco" value="">
+        <br>
+
+        <!--Botón de input de texto a cifrar-->
+        <input type ="button" class="button" id="get_enco_text" value="Crear Mensaje Secreto">
+
+        <p id="show_msg_enco" class="box_result"></p>   
+      </div>  
+   
+      <!-- Caja de texto para descifrar, -->
+      <div id="decode_box" class="not_show">
+        <textarea id= "textarea_deco" name="comments" rows="10" cols="40" placeholder="Escribe tu mensaje aquí"></textarea>
+        <br>
+
+        <!-- Selección de offset para cifrado-->
+        Escribe el número que te dieron de "llave" para revelar el mensaje secreto.
+        <br><br/> 
+        <input type ="text" id="selec_offset_deco" value="">
+        <br>
+
+        <!--Botón de input de texto a cifrar y offset-->
+        <input type ="button" class="button" id="get_deco_text" value="Revelar Mensaje Secreto">
+      
+        <p id="show_msg_deco" class="box_result"></p>   
+      </div> 
+
+      <div id="btn_copy" class="not_show">
+          <input type= "button"  class="button" id="btn_to_copy" value="Copiar Mensaje">
+      </div>
+      
+      <div id="btn_ini" class="not_show">
+       <input type= "button"  class="button" id="btn_go_ini" value="Volver al Inicio">
+       <br><br><br>
+      </div>
+  
+      <script src="cipher.js"></script>
+      <script src="index.js"></script>
     
-  </div>
+    </div>
   </body>
 
 </html>

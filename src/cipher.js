@@ -25,6 +25,12 @@ window.cipher = {
         asciiResult = (textToAscii - 32 + offsetEnco)% 1 + 32;
         
         encodeResult += String.fromCharCode(asciiResult);
+
+      } else if (textToAscii>=48 && textToAscii<=57){
+        asciiResult = (textToAscii - 48 + offsetEnco)%10 + 48;
+
+        encodeResult += String.fromCharCode(asciiResult);
+
       }
 
     }
@@ -65,6 +71,12 @@ window.cipher = {
         asciiResult = parseInt(textToAscii - 32 - offsetDeco)% 1 + 32;
         
         decodeResult += String.fromCharCode(asciiResult);
+
+      }else if (textToAscii>=48 && textToAscii<=57){
+        asciiResult = parseInt(textToAscii - 48 - offsetDeco)%10 + 48;
+
+        decodeResult += String.fromCharCode(asciiResult);
+
       }
     }
     return decodeResult;
