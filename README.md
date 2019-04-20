@@ -1,6 +1,6 @@
 # 7-Secrets
 
-Webapp de creación de mensajes de textos secretos, pensado para niñas y adolescentes que quieran divertirse o mantener la privacidad de sus mensajes, con su grupo de mejores amigas.
+Webapp de creación de mensajes de _textos secretos_, pensado para niñas y adolescentes que quieran divertirse o mantener la privacidad de sus mensajes, con su grupo de mejores amigas.
 
 ![portada](https://i.pinimg.com/originals/b0/3c/22/b03c2206a5fb606acd5c8003007daecf.png)
 
@@ -12,7 +12,7 @@ Webapp de creación de mensajes de textos secretos, pensado para niñas y adoles
 En el proceso de planificación producción se realizó:
 * Diagrama de Flujo.
 * Prototipado de baja fidelidad e iteración.
-* Utilización de herramientas de planificación "Trello" (ver [aquí )](https://trello.com/b/2ZsRb2tk/cifrado-cesar), "Keep Google".
+* Utilización de herramienta "Trello" (ver [aquí )](https://trello.com/b/2ZsRb2tk/cifrado-cesar), "Keep Google".
 
 #### Diseño
 El nombre y la interfaz gráfica fue pensada en una analogía a 7-Rings, canción popular juvenil de Ariana Grande, y que hace mención al girl power y la amistad, buscando de esa forma una identificación de marca con esta canción que está en los Top Charts y que es favorita entre las jovencitas adolescentes.
